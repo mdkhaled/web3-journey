@@ -127,6 +127,36 @@ count = _count; //Write data back to memory
 ## 🟢 Calldata — Low Risk
 <table> <tr style="background-color:#e6ffed;"> <th>Red Flag</th> <th>Risk</th> </tr> <tr> <td>Unnecessary copying</td> <td>Gas waste</td> </tr> <tr> <td>`public` instead of `external`</td> <td>Higher execution cost</td> </tr> <tr> <td>Attempted mutation</td> <td>Compile-time failure</td> </tr> </table>
 
+
+🔵 Calldata Issues
+
+Using memory instead of calldata for external arrays
+
+Copying calldata unnecessarily
+
+💰 6️⃣ Gas Optimization Patterns
+🟢 Use Calldata for External Arrays
+function process(uint[] calldata arr) external {}
+
+
+✔ Avoids memory copy
+
+🟢 Pack Variables Properly
+
+Group smaller types together.
+
+🟢 Cache Storage Variables
+uint local = stateVar;
+
+
+✔ Reduces repeated SLOAD
+
+🟢 Use Events Instead of Storage
+emit Updated(value);
+
+
+✔ Cheaper than storing historical data
+
 ---
 
 ## 🔵 Stack — Logic Risk

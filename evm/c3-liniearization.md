@@ -1,0 +1,1 @@
+https://medium.com/@mehmetyaman/understanding-c3-linearization-the-algorithm-behind-python-and-soliditys-method-resolution-order-f386b9a10696
