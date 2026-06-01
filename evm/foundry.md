@@ -42,9 +42,10 @@ forge test --match-contract ExploitTest
 ## Verbosity Levels (Critical for Audit)
 - Flag → Meaning
 - -v → Logs
-- -vv → Execution traces
-- -vvv → Traces for failing tests
-- -vvvv → Full traces for all tests
+- -vv → Execution traces. Logs emitted during tests are also displayed. That includes assertion errors from tests, showing information such as expected vs actual.
+- -vvv → Traces for failing tests. Stack traces for failing tests are also displayed.
+- -vvvv → Full traces for all tests. Stack traces for all tests are displayed, and setup traces for failing tests are displayed.
+- -vvvvv → Stack traces and setup traces are always displayed.
 
 For deep audit debugging:
 ```
